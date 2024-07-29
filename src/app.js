@@ -2,11 +2,9 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  /*Your code here*/
+
   let pronouns = ["the", "My", "Your"];
   let adjs = ["great", "big", "blue"];
   let nouns = ["jogger", "racoon", "pc"];
@@ -19,7 +17,6 @@ window.onload = function() {
       for (let a = 0; a < adjs.length; a++) {
         for (let n = 0; n < nouns.length; n++) {
           for (let d = 0; d < domains.length; d++) {
-            // Iterate over domain extensions
             combinaciones.push(
               `${pronouns[p]}${adjs[a]}${nouns[n]}${domains[d]}`
             );
@@ -37,7 +34,7 @@ window.onload = function() {
   button.addEventListener("click", () => {
     resultList.innerHTML = "";
 
-    let combinaciones = posiblesCombinaciones(pronouns, adjs, nouns, domains); // Pass the domains array to the function
+    let combinaciones = posiblesCombinaciones(pronouns, adjs, nouns, domains);
 
     combinaciones.forEach(combinacion => {
       let listItem = document.createElement("li");
